@@ -11,9 +11,9 @@ params:
   SOME_PARAM: DEPLOY!!!
 
 inputs:
-- name: worker
-- name: controller
-- name: release
+- name: c-code
+- name: altbosh
+- name: integration-suite
   
 outputs:
 - name: final-release
