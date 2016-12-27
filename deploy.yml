@@ -23,7 +23,7 @@ run:
   args:
   - -exc
   - |
-    gcc ../worker/hola.c -o hola
-    go build ../controller/altbosh.go -o altbosh
+    gcc ../c-code/hola.c -o hola
+    go build ../altbosh/altbosh.go -o altbosh
     cp ../release/index.html .
     tar cvfj final-release.tar.bz2 .
