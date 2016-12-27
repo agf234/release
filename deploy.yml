@@ -16,7 +16,7 @@ inputs:
 - name: integration-suite
   
 outputs:
-- name: final-release
+- name: release
 
 run:
   path: sh
