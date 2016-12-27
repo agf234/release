@@ -1,0 +1,29 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: golang
+    tag: '1.6'
+
+params:
+  SOME_PARAM: DEPLOY!!!
+
+inputs:
+- name: worker
+- name: controller
+- name: release
+  
+outputs:
+- name: final-release
+
+run:
+  path: sh
+  args:
+  - -exc
+  - |
+    gcc ../worker/hola.c -o hola
+    go build ../controller/altbosh.go -o altbosh
+    cp ../release/index.html .
+    tar cvfj final-release.tar.bz2 .
