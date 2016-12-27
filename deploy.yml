@@ -15,9 +15,6 @@ inputs:
 - name: altbosh
 - name: integration-suite
   
-outputs:
-- name: release
-
 run:
   path: sh
   args:
